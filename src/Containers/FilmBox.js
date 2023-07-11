@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import FilmList from "../Components/FilmList";
 import LinkList from "../Components/LinkList";
+import '../Components/FilmBox.css'
 
 function FilmBox() {
 
@@ -45,10 +46,16 @@ function FilmBox() {
     );
 
     return (
-        <div className="App">
+        <div className = "App">
             <h1>Upcoming Film Releases for UK</h1>
-            <FilmList filmsData = {films}/>
-            <LinkList linksData = {links}/>
+            <hr />
+            <ul>
+                <FilmList filmsData = {films}/>
+            </ul>
+            <hr />
+            <ul className="LinkBox">
+                <LinkList linksData = {links}/>
+            </ul>
         </div>
     )
 };
