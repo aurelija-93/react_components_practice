@@ -1,8 +1,12 @@
 import React from "react";
 
-function Link () {
+function Link ({name, url}) {
     return (
-        <h3>This is a Link</h3>
+        <ul>
+            <li>
+                <a href = {url}>{name}</a>
+            </li>
+        </ul>
     )
 };
 

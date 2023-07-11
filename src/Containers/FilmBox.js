@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import FilmList from "../Components/FilmList";
-import Link from "../Components/Link";
+import LinkList from "../Components/LinkList";
 
 function FilmBox() {
 
@@ -34,11 +34,21 @@ function FilmBox() {
           ]
     );
 
+    const [links, setLinks] = useState(
+        [
+            {
+                id: 1,
+                name: 'View more upcoming releases >>',
+                url: 'https://www.imdb.com/calendar/?region=gb'
+            }
+        ]
+    );
+
     return (
         <div className="App">
             <h1>Upcoming Film Releases for UK</h1>
             <FilmList filmsData = {films}/>
-            <Link />
+            <LinkList linksData = {links}/>
         </div>
     )
 };
