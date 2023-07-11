@@ -1,12 +1,12 @@
 import React from "react";
 
-function Film () {
+function Film ({url, name}) {
     return (
-        <>
-            <h3>This is a Film</h3>
-            <h3>This is a Film</h3>
-            <h3>This is a Film</h3>
-        </>
+        <ul>
+            <li>
+                <a href={url}>{name}</a>
+            </li>
+        </ul>
     )
 };
 
